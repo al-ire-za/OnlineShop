@@ -13,19 +13,72 @@
 
 <body class="font-vazir">
     
-    <header class="flex justify-between items-center container max-w-[1200px] mx-auto p-3">
-        <div class="flex  items-center">
-            <img src="./images/logo.png" alt="" class="w-14 h-10">
-            <span class="text-xl ">OnlineShop</span>
-        </div>
+    <header class="bg-black p-3 ">
+        <div class="flex justify-between items-center max-w-[1300px] mx-auto">
+            <div class="flex items-center gap-4">
+                <div class="flex justify-center items-center">
+                    <img src="./images/logo.png" alt="" class="w-14 h-10">
+                    <span class="text-xl font-bold text-transparent bg-gradient-to-r from-orange-300 to-red-700 bg-clip-text">OnlineShop</span>
+                </div>
+                <nav class="hidden md:block text-white text-sm space-x-2">
+                    <a href="#" class="text-orange-600">Home</a>
+                    <a href="#" class="hover:text-orange-600">contact us</a>
+                </nav>
+            </div>
 
-        <div>
-            <button class="hover:scale-110 transition-transform duration-200 bg-transparent">
-            🛒
-            </button>
-
+            <div>
+                <button class="hover:scale-110 transition-transform duration-200 bg-transparent text-xl">🛒</button>
+                
+            </div>
         </div>
     </header>
+
+    <section class="container max-w-[1300px] mx-auto mt-5 p-3">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+            <aside class="hidden md:block md:grid-cols-1 bg-black/75 h-fit p-2 rounded-lg">
+                <input type="text" placeholder="Product name" class="p-2 mt-1 rounded-sm">
+                <div class="flex flex-col">
+                    <span class="text-white font-bold text-lg p-1 mt-4">Category</span>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <span class="text-white py-2">Beauty</span>
+                    </div>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <span class="text-white py-2">Fragrances</span>
+                    </div>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <span class="text-white py-2">Furniture</span>
+                    </div>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <span class="text-white py-2">Groceries</span>
+                    </div>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <span class="text-white py-2">Kitchen Accessories</span>
+                    </div>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <span class="text-white py-2">Laptops</span>
+                    </div>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <span class="text-white py-2">Mens Shirts</span>
+                    </div>
+                    <div class="p-2">
+                        <input type="checkbox">
+                        <Span class="text-white py-2">Motorcycle</Span>
+                    </div> 
+                </div>
+            </aside>
+        </div>
+    </section>
+
+
+
+    
 </body>
 
 

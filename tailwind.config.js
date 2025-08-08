@@ -6,9 +6,6 @@ module.exports = {
        fontFamily: {
           vazir: ['Vazir', 'sans-serif'],
        },
-        colors: {
-            bklogo : "#fbfaf8" ,
-          }
     },
   },
   plugins: [],
