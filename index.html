@@ -13,7 +13,7 @@
 
 <body class="font-vazir bg-black/90">
     
-    <header class="bg-black p-3 ">
+    <header id="main-header" class="bg-black p-3 sticky top-0">
         <div class="flex justify-between items-center max-w-[1300px] mx-auto">
             <div class="flex items-center gap-4">
                 <div class="flex justify-center items-center">
@@ -35,7 +35,7 @@
 
     <section class="container max-w-[1300px] mx-auto mt-5 p-3">
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
-            <aside class="border border-orange-600 hidden md:block md:grid-cols-1 bg-black/75 h-fit p-2 rounded-lg">
+            <aside class="sticky top-16 border border-orange-600 hidden md:block md:grid-cols-1 bg-black/75 h-fit p-2 rounded-lg">
                 <div class="relative">
                     <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
                     <input type="text" placeholder="Product name" 
@@ -80,18 +80,8 @@
             </aside>
 
             <main class="md:col-span-2 lg:col-span-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                    <article class="bg-black/75 rounded-lg border border-orange-600">
-                        <img src="./images/1.webp" alt="" class="object-contain">
-                        <div class="flex justify-between p-2">
-                            <span class="p-2 text-white font-semibold text-lg truncate">name</span>
-                            <div class="flex gap-2 justify-center items-center">
-                                <button class="border border-orange-600 w-6 h-6 flex items-center justify-center rounded-sm text-white hover:bg-white hover:text-black transition">+</button>
-                                <p class="font-bold text-white">199.50</p>
-                                <button class="border border-orange-600 w-6 h-6 flex items-center justify-center rounded-sm text-white hover:bg-white hover:text-black transition">-</button>
-                            </div>
-                        </div>
-                    </article>
+                <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                    
                 </div>
             </main>
         </div>
@@ -99,7 +89,7 @@
 
 
 
-    
+    <script src="./script.js"></script>
 </body>
 
 

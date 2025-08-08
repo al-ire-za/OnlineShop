@@ -596,12 +596,40 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .left-3 {
   left: 0.75rem;
 }
 
 .top-1\/2 {
   top: 50%;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.top-12 {
+  top: 3rem;
+}
+
+.top-14 {
+  top: 3.5rem;
+}
+
+.top-16 {
+  top: 4rem;
 }
 
 .mx-auto {
