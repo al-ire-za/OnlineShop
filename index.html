@@ -34,48 +34,38 @@
     </header>
 
     <section class="container max-w-[1300px] mx-auto mt-5 p-3">
+        <div class="relative md:hidden mb-4">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input type="text" id="search-input" placeholder="Product name" 
+                class="pl-10 pr-3 py-2 rounded-sm w-full" />
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
             <aside class="sticky top-16 border border-orange-600 hidden md:block md:grid-cols-1 bg-black/75 h-fit p-2 rounded-lg">
                 <div class="relative">
                     <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                    <input type="text" placeholder="Product name" 
+                    <input type="text" id="search-input" placeholder="Product name" 
                         class="pl-10 pr-3 py-2 rounded-sm w-full" />
                 </div>
 
                 <div class="flex flex-col">
                     <span class="text-white font-bold text-lg p-1 mt-4">Category</span>
                     <div class="p-2">
-                        <input type="checkbox">
+                        <input id="Beauty" type="checkbox">
                         <span class="text-white py-2">Beauty</span>
                     </div>
                     <div class="p-2">
-                        <input type="checkbox">
+                        <input id="Fragrances" type="checkbox">
                         <span class="text-white py-2">Fragrances</span>
                     </div>
                     <div class="p-2">
-                        <input type="checkbox">
+                        <input id="Furniture" type="checkbox">
                         <span class="text-white py-2">Furniture</span>
                     </div>
                     <div class="p-2">
-                        <input type="checkbox">
+                        <input id="Groceries" type="checkbox">
                         <span class="text-white py-2">Groceries</span>
                     </div>
-                    <div class="p-2">
-                        <input type="checkbox">
-                        <span class="text-white py-2">Kitchen Accessories</span>
-                    </div>
-                    <div class="p-2">
-                        <input type="checkbox">
-                        <span class="text-white py-2">Laptops</span>
-                    </div>
-                    <div class="p-2">
-                        <input type="checkbox">
-                        <span class="text-white py-2">Mens Shirts</span>
-                    </div>
-                    <div class="p-2">
-                        <input type="checkbox">
-                        <Span class="text-white py-2">Motorcycle</Span>
-                    </div> 
+                    
                 </div>
             </aside>
 
