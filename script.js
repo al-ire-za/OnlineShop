@@ -1,6 +1,11 @@
 let allProducts = []
 let cartlist = [];
 
+const shoppingCartBtn = document.getElementById("shopping-cart");
+const cartModal = document.getElementById("cart-modal");
+const closeCartBtn = document.getElementById("close-cart");
+const cartItems = document.getElementById("cart-items");
+
 fetch("https://dummyjson.com/products")
 .then((response) => response.json())
 .then(data => {
@@ -41,11 +46,6 @@ function renderProducts(products) {
 
         
 }
-
-const shoppingCartBtn = document.getElementById("shopping-cart");
-const cartModal = document.getElementById("cart-modal");
-const closeCartBtn = document.getElementById("close-cart");
-const cartItems = document.getElementById("cart-items");
 
 function removeFromCart(product) {
     let existing = cartlist.find(p => p.id === product.id);
@@ -92,9 +92,9 @@ function renderCart() {
         div.innerHTML = `
             <span>${item.title}</span>
             <div class="flex items-center gap-2">
-                <button class="text-white bg-red-600 px-2 rounded remove-item">-</button>
+                <button class="text-black bg-red-600 px-2 rounded remove-item">-</button>
                 <span>x${item.quantity}</span>
-                <button class="text-white bg-green-600 px-2 rounded add-item">+</button>
+                <button class="text-black bg-green-600 px-2 rounded add-item">+</button>
             </div>
         `;
         cartItems.appendChild(div);
