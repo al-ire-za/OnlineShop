@@ -9,6 +9,9 @@ toggleBtn.addEventListener('click', () => {
     isDark = !isDark;
 
     if(!isDark){
+        toggleCircle.classList.add("bg-white");
+        toggleCircle.classList.remove("bg-black");
+        toggleCircle.innerHTML = "☀️";
         body.classList.add("bg-white");
         body.classList.remove("bg-black/90");
         toggleCircle.classList.add("translate-x-6");
@@ -17,6 +20,9 @@ toggleBtn.addEventListener('click', () => {
         header.classList.add("bg-bgh");
         header.classList.remove("bg-black");
     } else {
+        toggleCircle.classList.add("bg-black");
+        toggleCircle.classList.remove("bg-white");
+        toggleCircle.innerHTML = "🌙";
         body.classList.add("bg-black/90");
         body.classList.remove("bg-white");
         toggleCircle.classList.remove("translate-x-6");

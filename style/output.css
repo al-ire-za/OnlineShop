@@ -718,12 +718,20 @@ video {
   width: 100%;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .min-w-\[300px\] {
   min-width: 300px;
 }
 
 .max-w-\[1300px\] {
   max-width: 1300px;
+}
+
+.max-w-\[400px\] {
+  max-width: 400px;
 }
 
 .flex-grow {
