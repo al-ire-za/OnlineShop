@@ -5,6 +5,12 @@ const shoppingCartBtn = document.getElementById("shopping-cart");
 const cartModal = document.getElementById("cart-modal");
 const closeCartBtn = document.getElementById("close-cart");
 const cartItems = document.getElementById("cart-items");
+const toggleBtn = document.getElementById("toggleSwitch");
+const toggleCircle = document.getElementById("toggleCircle");
+const body = document.body;
+const header = document.getElementById("main-header");
+const inputProduct = document.getElementById("input-Product");
+let isDark = true;
 
 fetch("https://dummyjson.com/products")
 .then((response) => response.json())
@@ -12,6 +18,29 @@ fetch("https://dummyjson.com/products")
     allProducts = data.products;
     renderProducts(allProducts);
     
+});
+
+toggleBtn.addEventListener('click', ()=>{
+    isDark = !isDark;
+    
+
+    if (!isDark){
+        toggleCircle.classList.add("translate-x-6");
+        toggleCircle.innerHTML = "☀️";
+        body.classList.add("bg-white/80");
+        body.classList.remove("bg-black/90");
+        header.classList.add("bg-black/75");
+        
+        
+        
+    } else {
+        toggleCircle.classList.remove("translate-x-6");
+        toggleCircle.innerHTML = "🌙";
+        body.classList.add("bg-black/90");
+        body.classList.remove("bg-white"); 
+        
+    }
+
 });
 
 function renderProducts(products) {
