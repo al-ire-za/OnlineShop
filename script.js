@@ -27,17 +27,28 @@ toggleBtn.addEventListener('click', ()=>{
     if (!isDark){
         toggleCircle.classList.add("translate-x-6");
         toggleCircle.innerHTML = "☀️";
-        body.classList.add("bg-white/80");
-        body.classList.remove("bg-black/90");
-        header.classList.add("bg-black/75");
+        toggleCircle.classList.add("bg-white");
+        toggleCircle.classList.remove("bg-black");
+        body.classList.add("bg-white", "bg-opacity-80");
+        body.classList.remove("bg-black", "bg-opacity-90");
+        header.classList.add("bg-bgh");
+        header.classList.remove("bg-black");  
+        inputProduct.classList.add("bg-bgh");
+        inputProduct.classList.remove("bg-black");
         
         
         
     } else {
         toggleCircle.classList.remove("translate-x-6");
         toggleCircle.innerHTML = "🌙";
-        body.classList.add("bg-black/90");
-        body.classList.remove("bg-white"); 
+        toggleCircle.classList.add("bg-black");
+        toggleCircle.classList.remove("bg-white");
+        body.classList.add("bg-black", "bg-opacity-90");
+        body.classList.remove("bg-white", "bg-opacity-80"); 
+        header.classList.remove("bg-bgh");
+        header.classList.add("bg-black");
+        inputProduct.classList.add("bg-black");
+        inputProduct.classList.remove("bg-bgh");
         
     }
 

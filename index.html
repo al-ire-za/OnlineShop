@@ -12,9 +12,6 @@
 
 
 <body class="font-vazir bg-black/90">
-    <!-- فقط برای اینکه Tailwind این کلاس رو حذف نکنه -->
-    <div class="hidden translate-x-6"></div>
-
 
     <div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
         <div class="bg-white rounded-lg w-96 p-4 border border-orange-600">
@@ -29,7 +26,7 @@
         </div>
     </div>
     
-    <header id="main-header" class="bg-black p-3 sticky top-0">
+    <header id="main-header" class="bg-black p-3 sticky top-0 border-b border-orange-600">
         <div class="flex justify-between items-center max-w-[1300px] mx-auto">
             <div class="flex items-center gap-4">
                 <div class="flex justify-center items-center">
@@ -45,7 +42,7 @@
             <div class="flex">
                 <button id="shopping-cart" class="hover:scale-110 transition-transform duration-200 bg-transparent text-xl">🛒</button>
                 <button id="toggleSwitch" class="w-14 h-8 flex items-center bg-gray-500 rounded-full p-1 transition-colors duration-300">
-                    <div id="toggleCircle" class="w-6 h-6 bg-blue-600 rounded-full shadow-md transform transition-transform duration-300">
+                    <div id="toggleCircle" class="w-6 h-6 bg-black rounded-full shadow-md transform transition-transform duration-300">
                     🌙
                     </div>
                 </button>
@@ -54,13 +51,13 @@
     </header>
 
     <section class="container max-w-[1300px] mx-auto mt-5 p-3">
-        <div class="relative md:hidden mb-4">
+        <div class="sticky top-[68px] relative md:hidden mb-4">
             <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
             <input id="input-Product" type="text" placeholder="Product name" 
-                class="pl-10 pr-3 py-2 rounded-sm w-full search-input bg-black/75 border border-orange-600 text-white outline-none" />
+                class="pl-10 pr-3 py-2 rounded-sm w-full search-input bg-black border border-orange-600 text-white outline-none placeholder-white/80" />
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
-            <aside class="sticky top-16 border border-orange-600 hidden md:block md:grid-cols-1 bg-black/75 h-fit p-2 rounded-lg">
+            <aside class="sticky top-[68px] border border-orange-600 hidden md:block md:grid-cols-1 bg-black/75 h-fit p-2 rounded-lg">
                 <div class="relative">
                     <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
                     <input type="text" id="search-input" placeholder="Product name" 

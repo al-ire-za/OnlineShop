@@ -11,7 +11,7 @@
 
     <body class="bg-black/90  flex flex-col min-h-screen">
 
-        <header id="main-header" class="bg-black p-3 sticky top-0">
+        <header id="main-header" class="bg-black p-3 sticky top-0 border-b border-orange-600 ">
             <div class="flex justify-between items-center max-w-[1300px] mx-auto">
                 <div class="flex items-center gap-4">
                     <div class="flex justify-center items-center">
@@ -24,14 +24,19 @@
                     </nav>
                 </div>
 
-                <div>
+                <div class="flex">
                     <button id="shopping-cart" class="hover:scale-110 transition-transform duration-200 bg-transparent text-xl">🛒</button>
+                    <button id="toggleSwitch" class="w-14 h-8 flex items-center bg-gray-500 rounded-full p-1 transition-colors duration-300">
+                        <div id="toggleCircle" class="w-6 h-6 bg-black rounded-full shadow-md transform transition-transform duration-300">
+                        🌙
+                        </div>
+                    </button>
                 </div>
             </div>
         </header>
 
         <main class="grid place-items-center flex-grow">
-            <section class=" w-[400px] rounded-lg shadow-[0_0_25px_rgba(0,0,0,0.6)] border border-orange-600">
+            <section id="form" class="bg-black w-[400px] rounded-lg shadow-[0_0_25px_rgba(0,0,0,0.6)] border border-orange-600">
                 <form class="flex flex-col gap-2 px-10 py-10">
                     <div class="flex flex-col">
                         <label for="name" class="text-white mb-1 ">Name</label>
@@ -61,5 +66,6 @@
             </section>
         </main>
         
+        <Script src="./scriptcantact.js"></Script>
     </body>
 </html>
