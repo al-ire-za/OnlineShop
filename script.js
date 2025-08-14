@@ -10,6 +10,9 @@ const toggleCircle = document.getElementById("toggleCircle");
 const body = document.body;
 const header = document.getElementById("main-header");
 const inputProduct = document.getElementById("input-Product");
+const navG = document.getElementById("home-nav");
+const mobileMenu = document.getElementById("mobile-menu");
+const sidebar = document.getElementById("sidebar");
 let isDark = true;
 
 fetch("https://dummyjson.com/products")
@@ -19,6 +22,12 @@ fetch("https://dummyjson.com/products")
     renderProducts(allProducts);
     
 });
+
+navG.addEventListener('click', () => {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+
+
 
 toggleBtn.addEventListener('click', ()=>{
     isDark = !isDark;
@@ -33,9 +42,15 @@ toggleBtn.addEventListener('click', ()=>{
         body.classList.remove("bg-black", "bg-opacity-90");
         header.classList.add("bg-bgh");
         header.classList.remove("bg-black");  
-        inputProduct.classList.add("bg-bgh");
+        inputProduct.classList.add("bg-bgh", "border-2");
         inputProduct.classList.remove("bg-black");
-        
+        mobileMenu.classList.add("bg-bgh", "border-b-[2.5px]");
+        mobileMenu.classList.remove("bg-black");
+        document.querySelectorAll('#product-list article').forEach(card => {
+        card.classList.add("border-2"); 
+        sidebar.classList.add("border-2");
+        sidebar.classList.remove("border");
+    });
         
         
     } else {
@@ -48,7 +63,15 @@ toggleBtn.addEventListener('click', ()=>{
         header.classList.remove("bg-bgh");
         header.classList.add("bg-black");
         inputProduct.classList.add("bg-black");
-        inputProduct.classList.remove("bg-bgh");
+        inputProduct.classList.remove("bg-bgh", "border-2");
+        mobileMenu.classList.add("bg-black");
+        mobileMenu.classList.remove("bg-bgh", "border-b-[2.5px]");
+        document.querySelectorAll('#product-list article').forEach(card => {
+        card.classList.remove("border-2");
+    });
+        sidebar.classList.add("border");
+        sidebar.classList.remove("border-2");
+        
         
     }
 
