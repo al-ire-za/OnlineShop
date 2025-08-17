@@ -3,7 +3,13 @@ const toggleCircle = document.getElementById("toggleCircle");
 const body = document.body;
 const header = document.getElementById("main-header");
 const form = document.getElementById("form");
+const navG = document.getElementById("home-nav");
+const mobileMenu = document.getElementById("mobile-menu");
 let isDark = true; 
+
+navG.addEventListener('click', () => {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+});
 
 toggleBtn.addEventListener('click', () => {
     isDark = !isDark;
@@ -19,6 +25,8 @@ toggleBtn.addEventListener('click', () => {
         form.classList.remove("bg-black");
         header.classList.add("bg-bgh");
         header.classList.remove("bg-black");
+        mobileMenu.classList.add("bg-bgh", "border-b-[1.5px]");
+        mobileMenu.classList.remove("bg-black");
     } else {
         toggleCircle.classList.add("bg-black");
         toggleCircle.classList.remove("bg-white");
@@ -31,5 +39,7 @@ toggleBtn.addEventListener('click', () => {
         header.classList.add("bg-black");
         header.classList.remove("bg-bgh");
         header.classList.add("bg-black");
+        mobileMenu.classList.add("bg-black");
+        mobileMenu.classList.remove("bg-bgh", "border-b-[1.5px]");
     }
 });

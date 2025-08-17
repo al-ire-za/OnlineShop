@@ -151,7 +151,7 @@ function renderCart() {
     }
     cartlist.forEach(item => {
         const div = document.createElement("div");
-        div.className = "flex justify-between border-b-1 border-orange-600 py-1 items-center";
+        div.className = "flex justify-between border-b-[1px] border-orange-600 p-[8px] items-center";
         div.innerHTML = `
             <span>${item.title}</span>
             <div class="flex items-center gap-2">

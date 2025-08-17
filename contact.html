@@ -24,16 +24,21 @@
                     </nav>
                 </div>
 
-                <div class="flex">
-                    
+                <div class="flex gap-2">
                     <button id="toggleSwitch" class="w-14 h-8 flex items-center bg-gray-500 rounded-full p-1 transition-colors duration-300">
                         <div id="toggleCircle" class="w-6 h-6 bg-black rounded-full shadow-md transform transition-transform duration-300">
                         🌙
                         </div>
                     </button>
+                    <button id="home-nav" class="md:hidden text-white justify-center items-center pt-1"><i class="fas fa-bars text-white text-2xl"></i></button>
                 </div>
             </div>
         </header>
+
+        <div id="mobile-menu" class="hidden flex flex-col bg-black text-black p-2 border-b border-orange-600">
+            <a href="http://127.0.0.1:5500/OnlineShop/index.html" class="p-1 text-sm text-orange-600">Home</a>
+            <a href="http://127.0.0.1:5500/OnlineShop/contact.html" class="p-1 text-sm text-white hover:text-orange-600">Contact Us</a>
+        </div>
 
         <main class="grid place-items-center flex-grow">
             <section id="form" class="bg-black w-full max-w-[400px] rounded-lg shadow-[0_0_25px_rgba(0,0,0,0.6)] border border-orange-600">
