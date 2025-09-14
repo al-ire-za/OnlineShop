@@ -15,13 +15,34 @@ const mobileMenu = document.getElementById("mobile-menu");
 const sidebar = document.getElementById("sidebar");
 let isDark = true;
 
-fetch("https://dummyjson.com/products")
-.then((response) => response.json())
-.then(data => {
+(async () => {
+  const LS_KEY = 'products-cache-v1';
+  try {
+    const res = await fetch('https://dummyjson.com/products', {
+      credentials: 'omit',
+      cache: 'no-store'
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    // ذخیره برای استفاده آفلاین
+    localStorage.setItem(LS_KEY, JSON.stringify(data.products));
+
     allProducts = data.products;
     renderProducts(allProducts);
-    
-});
+  } catch (e) {
+    console.warn('Products fetch failed, using local cache if any:', e.message);
+    const cached = localStorage.getItem(LS_KEY);
+    if (cached) {
+      allProducts = JSON.parse(cached);
+      renderProducts(allProducts);
+    } else {
+      // UI آفلاین
+      renderProducts([]);
+      // مثلا: showToast('آفلاین هستید و داده‌ای کش نشده')
+    }
+  }
+})();
 
 navG.addEventListener('click', () => {
     document.getElementById("mobile-menu").classList.toggle("hidden");
@@ -218,3 +239,9 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js', { scope: './' });
+  });
+}
